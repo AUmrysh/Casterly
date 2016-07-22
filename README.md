@@ -16,5 +16,5 @@ Casterly lets you stream a dynamic webpage to a chromecast from a headless serve
 
 ##How to?
 
-```$ nodejs cast.js "My Chromecast" "http://www.github.com"```
+```$ nodejs cast.js -c "My Chromecast" -u "http://www.github.com"```
 
