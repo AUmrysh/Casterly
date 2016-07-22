@@ -3,11 +3,11 @@ Casterly lets you stream a dynamic webpage to a chromecast from a headless serve
 
 ##Dependencies
 ###phantomjs
-+PhantomJS
++ PhantomJS
 ###nodejs
-+castv2-client
-+optimist
-+bonjour
++ castv2-client
++ optimist
++ bonjour
 
 ##How to?
 ```$ nodejs cast.js "My Chromecast" "http://www.github.com"```
