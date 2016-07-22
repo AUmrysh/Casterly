@@ -12,7 +12,9 @@ page.clipRect = {top:0, left:0, width: w, height: h};
 var ctr = 0;
 page.open(args[1], function(){
   setInterval(function(){
-    page.render("/dev/stdout", {format:"png"});
+//    page.render("/dev/stdout", {format:"png"});
+    var buf =page.renderBase64("png");
+    system.stdout.write(buf);
   }, 100);
 });
 
