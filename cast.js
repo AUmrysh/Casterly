@@ -6,7 +6,6 @@ var exec = require('child_process').exec;
 var Client = require("castv2-client").Client;
 var DefaultMediaReceiver = require("castv2-client").DefaultMediaReceiver;
 var args = process.argv;
-//var ipaddr = os.networkInterfaces()["eth0"][0]["address"]
 var interfaces = os.networkInterfaces();
 
 var client = new Client();
@@ -30,10 +29,6 @@ for (var nif in interfaces) {
 }
 
 console.log(localip);
-//determine if the chromecast was found
-//if (!found) {
-//  console.log("Unable to find specified chromecast on the network");
-//}
 
 function ondeviceup(host) {
 
@@ -68,6 +63,7 @@ phantom.stdout.on('data', function(d){
   ffmpeg.stdin.write(buf);
 });
 
+//cast the video feed
 client.connect(host, function(){
   console.log("connected, launching stream");
   client.launch(DefaultMediaReceiver, function(err, player) {
